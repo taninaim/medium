@@ -1,0 +1,7 @@
+{
+  "name": "medium",
+  "private": true,
+  "dependencies": {
+    "purecss": "^1.0.0"
+  }
+}
