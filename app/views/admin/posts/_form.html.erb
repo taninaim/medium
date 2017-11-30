@@ -1,0 +1,17 @@
+<%= form_for [:admin, @post], html: { class: 'pure-form pure-form-stacked' } do |f| %>
+    <fieldset>
+        <legend><%= @post.title %></legend>
+
+        <%= f.label :cover_picture %>
+        <%= f.hidden_field :cover_picture, value: @post.cached_cover_picture_data %>
+        <%= f.file_field :cover_picture %>
+
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'pure-input-1' %>
+
+        <%= f.label :content %>
+        <%= f.text_area :content, class: 'pure-input-1', rows: '10' %>
+
+        <%= f.submit 'Save', class: 'pure-button pure-button-primary pure-input-1' %>
+    </fieldset>
+<% end %>

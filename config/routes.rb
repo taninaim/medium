@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # admin space
   namespace :admin do
     resources :posts
+    root to: 'posts#index'
   end
 
   # user space

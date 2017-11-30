@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Helper function for Authentication
 module AuthHelper
     class << self
         def user_navigation(view)

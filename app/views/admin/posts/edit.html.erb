@@ -1,0 +1,11 @@
+<% content_for :action_title, @post.title %>
+
+<% content_for :left_action, Admin::BaseHelper.back_button(self) %>
+
+<% content_for :right_action do %>
+ <%= render "admin/posts/states/#{@post.current_state}" %>
+<% end %>
+
+<h1>Edit: <%= @post.title %></h1>
+
+<%= render 'form' %>

@@ -1,0 +1,15 @@
+<% content_for :action_title, "Preview: #{@post.title}" %>
+
+<% content_for :left_action do %>
+    <%= Admin::BaseHelper.back_button(self) %>
+<% end %>
+
+<% content_for :right_action do %>
+ <%= render "admin/posts/states/#{@post.current_state}" %>
+<% end %>
+
+<h1><%= @post.title %></h1>
+
+<div class='content'>
+    <%= simple_format @post.content %>
+</div>

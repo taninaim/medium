@@ -1,5 +1,9 @@
-<h1>Admin Posts</h1>
+<%= content_for :action_title, 'All Posts' %>
+
+<% content_for :left_action do %>
+    <%= Admin::BaseHelper.back_button(self) %>
+<% end %>
 
 <% @posts.each do |post| %>
-    <%= post.title %>
+    <%= render post %>
 <% end %>

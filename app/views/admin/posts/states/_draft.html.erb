@@ -1,0 +1,4 @@
+<%= form_for [:admin, @post] do |f| %>
+    <%= f.hidden_field :state_event, value: 'published' %>
+    <%= f.button 'Publish', class: 'pure-button pure-button-primary' %>
+<% end %>
